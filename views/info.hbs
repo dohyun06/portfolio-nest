@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Kim Do Hyun</title>
+  </head>
+  <body>
+    <header>
+      <h3 id="logo">Kim<br />Do Hyun</h3>
+      <div id="header-list">
+        <div id="info">info</div>
+        <div id="project">project</div>
+        <div id="plan">plan</div>
+      </div>
+    </header>
+    <main>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="300"
+        height="285"
+        viewBox="0 0 300 285"
+        fill="none"
+        role="img"
+        aria-labelledby="descId"
+      >
+        <title id="titleId" />
+        <desc id="descId" />
+        <style>
+          .header {
+            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            fill: #2f80ed;
+            animation: fadeInAnimation 0.8s ease-in-out forwards;
+          }
+          @supports (-moz-appearance: auto) {
+            /* Selector detects Firefox */
+            .header {
+              font-size: 15.5px;
+            }
+          }
+
+          @keyframes slideInAnimation {
+            from {
+              width: 0;
+            }
+            to {
+              width: calc(100%-100px);
+            }
+          }
+          @keyframes growWidthAnimation {
+            from {
+              width: 0;
+            }
+            to {
+              width: 100%;
+            }
+          }
+          .stat {
+            font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
+            fill: #434d58;
+          }
+          @supports (-moz-appearance: auto) {
+            /* Selector detects Firefox */
+            .stat {
+              font-size: 12px;
+            }
+          }
+          .bold {
+            font-weight: 700;
+          }
+          .lang-name {
+            font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif;
+            fill: #434d58;
+          }
+          .stagger {
+            opacity: 0;
+            animation: fadeInAnimation 0.3s ease-in-out forwards;
+          }
+          #rect-mask rect {
+            animation: slideInAnimation 1s ease-in-out forwards;
+          }
+          .lang-progress {
+            animation: growWidthAnimation 0.6s ease-in-out forwards;
+          }
+
+          /* Animations */
+          @keyframes scaleInAnimation {
+            from {
+              transform: translate(-5px, 5px) scale(0);
+            }
+            to {
+              transform: translate(-5px, 5px) scale(1);
+            }
+          }
+          @keyframes fadeInAnimation {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        </style>
+
+        <rect
+          data-testid="card-bg"
+          x="0.5"
+          y="0.5"
+          rx="4.5"
+          height="99%"
+          stroke="#e4e2e2"
+          width="299"
+          fill="#fffefe"
+          stroke-opacity="1"
+        />
+
+        <g data-testid="card-title" transform="translate(25, 35)">
+          <g transform="translate(0, 0)">
+            <text x="0" y="0" class="header" data-testid="header">Most Used Languages</text>
+          </g>
+        </g>
+
+        <g data-testid="main-card-body" transform="translate(0, 55)">
+          <svg data-testid="lang-items" x="25">
+            <g transform="translate(0, 0)">
+              <g class="stagger" style="animation-delay: 450ms">
+                <text data-testid="lang-name" x="2" y="15" class="lang-name">JavaScript</text>
+                <text x="215" y="34" class="lang-name">59.75%</text>
+
+                <svg width="205" x="0" y="25">
+                  <rect rx="5" ry="5" x="0" y="0" width="205" height="8" fill="#ddd" />
+                  <svg data-testid="lang-progress" width="59.75%">
+                    <rect
+                      height="8"
+                      fill="#f1e05a"
+                      rx="5"
+                      ry="5"
+                      x="0"
+                      y="0"
+                      class="lang-progress"
+                      style="animation-delay: 750ms"
+                    />
+                  </svg>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(0, 40)">
+              <g class="stagger" style="animation-delay: 600ms">
+                <text data-testid="lang-name" x="2" y="15" class="lang-name">C++</text>
+                <text x="215" y="34" class="lang-name">28.78%</text>
+
+                <svg width="205" x="0" y="25">
+                  <rect rx="5" ry="5" x="0" y="0" width="205" height="8" fill="#ddd" />
+                  <svg data-testid="lang-progress" width="28.78%">
+                    <rect
+                      height="8"
+                      fill="#f34b7d"
+                      rx="5"
+                      ry="5"
+                      x="0"
+                      y="0"
+                      class="lang-progress"
+                      style="animation-delay: 900ms"
+                    />
+                  </svg>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(0, 80)">
+              <g class="stagger" style="animation-delay: 750ms">
+                <text data-testid="lang-name" x="2" y="15" class="lang-name">CSS</text>
+                <text x="215" y="34" class="lang-name">7.05%</text>
+
+                <svg width="205" x="0" y="25">
+                  <rect rx="5" ry="5" x="0" y="0" width="205" height="8" fill="#ddd" />
+                  <svg data-testid="lang-progress" width="7.05%">
+                    <rect
+                      height="8"
+                      fill="#663399"
+                      rx="5"
+                      ry="5"
+                      x="0"
+                      y="0"
+                      class="lang-progress"
+                      style="animation-delay: 1050ms"
+                    />
+                  </svg>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(0, 120)">
+              <g class="stagger" style="animation-delay: 900ms">
+                <text data-testid="lang-name" x="2" y="15" class="lang-name">HTML</text>
+                <text x="215" y="34" class="lang-name">3.62%</text>
+
+                <svg width="205" x="0" y="25">
+                  <rect rx="5" ry="5" x="0" y="0" width="205" height="8" fill="#ddd" />
+                  <svg data-testid="lang-progress" width="3.62%">
+                    <rect
+                      height="8"
+                      fill="#e34c26"
+                      rx="5"
+                      ry="5"
+                      x="0"
+                      y="0"
+                      class="lang-progress"
+                      style="animation-delay: 1200ms"
+                    />
+                  </svg>
+                </svg>
+              </g>
+            </g>
+            <g transform="translate(0, 160)">
+              <g class="stagger" style="animation-delay: 1050ms">
+                <text data-testid="lang-name" x="2" y="15" class="lang-name">Python</text>
+                <text x="215" y="34" class="lang-name">0.81%</text>
+
+                <svg width="205" x="0" y="25">
+                  <rect rx="5" ry="5" x="0" y="0" width="205" height="8" fill="#ddd" />
+                  <svg data-testid="lang-progress" width="2%">
+                    <rect
+                      height="8"
+                      fill="#3572A5"
+                      rx="5"
+                      ry="5"
+                      x="0"
+                      y="0"
+                      class="lang-progress"
+                      style="animation-delay: 1350ms"
+                    />
+                  </svg>
+                </svg>
+              </g>
+            </g>
+          </svg>
+        </g>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        height="170"
+        width="350"
+        version="1.1"
+        xml:space="preserve"
+      >
+        <style type="text/css">
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=block');
+          @keyframes delayFadeIn {
+            0% {
+              opacity: 0;
+            }
+            60% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+          @keyframes rateBarAnimation {
+            0% {
+              stroke-dashoffset: 131.89999999999998;
+            }
+            70% {
+              stroke-dashoffset: 131.89999999999998;
+            }
+            100% {
+              stroke-dashoffset: 35;
+            }
+          }
+          .background {
+            fill: url(#grad);
+          }
+          text {
+            fill: white;
+            font-family: 'Noto Sans KR', sans-serif;
+          }
+          text.boj-handle {
+            font-weight: 700;
+            font-size: 1.45em;
+            animation: fadeIn 0.8s ease-in-out forwards;
+          }
+          text.tier-text {
+            font-weight: 700;
+            font-size: 1.45em;
+            opacity: 55%;
+          }
+          text.tier-number {
+            font-size: 3.1em;
+            font-weight: 700;
+          }
+          .subtitle {
+            font-weight: 500;
+            font-size: 0.9em;
+          }
+          .value {
+            font-weight: 400;
+            font-size: 0.9em;
+          }
+          .percentage {
+            font-weight: 300;
+            font-size: 0.8em;
+          }
+          .progress {
+            font-size: 0.7em;
+          }
+          .item {
+            opacity: 0;
+            animation: delayFadeIn 1s ease-in-out forwards;
+          }
+          .rate-bar {
+            stroke-dasharray: 131.89999999999998;
+            stroke-dashoffset: 131.89999999999998;
+            animation: rateBarAnimation 1.5s forwards ease-in-out;
+          }
+        </style>
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="35%">
+            <stop offset="10%" style="stop-color: #ffc944; stop-opacity: 1" />
+            <stop offset="55%" style="stop-color: #ffaf44; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #ff9632; stop-opacity: 1" />
+          </linearGradient>
+        </defs>
+        <rect width="350" height="170" rx="10" ry="10" class="background" />
+        <text x="315" y="50" class="tier-text" text-anchor="end">Gold2</text>
+        <text x="35" y="50" class="boj-handle">hyun4you2...</text>
+        <g class="item" style="animation-delay: 200ms">
+          <text x="35" y="79" class="subtitle">rate</text>
+          <text x="145" y="79" class="rate value">1,307</text>
+        </g>
+        <g class="item" style="animation-delay: 400ms">
+          <text x="35" y="99" class="subtitle">solved</text>
+          <text x="145" y="99" class="solved value">394</text>
+        </g>
+        <g class="item" style="animation-delay: 600ms">
+          <text x="35" y="119" class="subtitle">class</text>
+          <text x="145" y="119" class="class value">4</text>
+        </g>
+        <g class="rate-bar" style="animation-delay: 800ms">
+          <line
+            x1="35"
+            y1="142"
+            x2="131.89999999999998"
+            y2="142"
+            stroke-width="4"
+            stroke="floralwhite"
+            stroke-linecap="round"
+          />
+        </g>
+        <line
+          x1="35"
+          y1="142"
+          x2="290"
+          y2="142"
+          stroke-width="4"
+          stroke-opacity="40%"
+          stroke="floralwhite"
+          stroke-linecap="round"
+        />
+        <text x="297" y="142" alignment-baseline="middle" class="percentage">38%</text>
+        <text x="293" y="157" class="progress" text-anchor="end">1,307 / 1,400</text>
+      </svg>
+    </main>
+    <footer>
+      <div>email: dohyun06@gm.gist.ac.kr</div>
+      <div>github: https://github.com/dohyun06</div>
+    </footer>
+    <script src="/js/header.js"></script>
+  </body>
+</html>
