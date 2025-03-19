@@ -11,8 +11,7 @@ export class PlanController {
 
   @Get('table')
   renderTable() {
-    this.planService.getTable();
-    return;
+    return this.planService.getTable();
   }
 
   @Get('goal')

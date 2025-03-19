@@ -11,13 +11,17 @@ export class PlanService {
     const python = spawn('py', [
       'C:\\Users\\Dohyun\\Desktop\\Develop\\Web\\portfolio-nest\\src\\plan\\crawling.py',
     ]);
+    let subjects: string[] = [];
     // const python = spawn('py', [join(__dirname, ./crawling.py)]);
     python.stdout.on('data', (data: Buffer) => {
-      console.log(iconv.decode(data, 'euc-kr'));
+      subjects = iconv.decode(data, 'euc-kr').replace(/\[|\]/g, '').split(',');
+      console.log(subjects);
     });
     python.stderr.on('data', (data: Buffer) => {
       console.error(data.toString('utf-8'));
     });
+
+    return subjects;
   }
 
   async getGoal() {

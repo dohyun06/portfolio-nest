@@ -49,11 +49,11 @@ if __name__ == '__main__':
 
     subjects = []
     td = driver.find_elements(By.CSS_SELECTOR, "table.tablebody tbody tr td")
-    for i in range(len(td)):
-        subjectsName = td[i].find_elements(By.CSS_SELECTOR, "h3")
-        subjectsCss = td[i].find_elements(By.CSS_SELECTOR, "div.subject")
+    for i in td:
+        subjectsName = i.find_elements(By.CSS_SELECTOR, "h3")
+        subjectsCss = i.find_elements(By.CSS_SELECTOR, "div.subject")
         subjects.append([])
         for j in range(len(subjectsName)):
-            subjects[i].append([subjectsName[j].text, (float((subjectsCss[j].value_of_css_property('top'))[0:-2]) - 450) / 50 + 9, (float((subjectsCss[j].value_of_css_property('height'))[0:-2]) - 1) / 50])
+            subjects[-1].append([subjectsName[j].text, (float((subjectsCss[j].value_of_css_property('top'))[0:-2]) - 450) / 50 + 9, (float((subjectsCss[j].value_of_css_property('height'))[0:-2]) - 1) / 50])
 
     print(subjects)
