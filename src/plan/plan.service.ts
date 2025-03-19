@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { spawn } from 'child_process';
 import { PrismaService } from 'src/prisma/prisma.service';
-import iconv from 'iconv-lite';
-import { buffer } from 'stream/consumers';
+import * as iconv from 'iconv-lite';
 
 @Injectable()
 export class PlanService {
@@ -14,8 +13,6 @@ export class PlanService {
     ]);
     // const python = spawn('py', [join(__dirname, ./crawling.py)]);
     python.stdout.on('data', (data: Buffer) => {
-      console.log(data.toString('utf8'));
-      console.log(data.toString('utf-8'));
       console.log(iconv.decode(data, 'euc-kr'));
     });
     python.stderr.on('data', (data: Buffer) => {

@@ -4,9 +4,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pyperclip
+import subprocess
 
 if __name__ == '__main__':
-    driver = webdriver.Chrome()
+    chrome_browser = subprocess.Popen(r'C:\Program Files\Google\Chrome\Application\chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\temp\chrome"')
+    options = webdriver.ChromeOptions()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--ignore-certificate-errors')
+    options.add_experimental_option('debuggerAddress', '127.0.0.1:9222')
+    driver = webdriver.Chrome(options=options)
 
     driver.get('https://account.everytime.kr/login')
     driver.implicitly_wait(6)
