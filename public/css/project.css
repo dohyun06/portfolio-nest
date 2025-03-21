@@ -1,0 +1,17 @@
+main {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.detail {
+  padding: 50px 0;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag {
+  padding: 2px;
+}

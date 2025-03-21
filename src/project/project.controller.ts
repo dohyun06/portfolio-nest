@@ -11,7 +11,7 @@ export class ProjectController {
   renderProjects() {}
 
   @Get('data')
-  async getDatas(): Promise<ProjectDto[]> {
+  async sendDatas(): Promise<ProjectDto[]> {
     return await this.projectService.getProjects();
   }
 
@@ -20,7 +20,7 @@ export class ProjectController {
   renderProject() {}
 
   @Get(':id/data')
-  async renderData(@Param() data: { id: string }): Promise<ProjectDto[]> {
+  async sendData(@Param() data: { id: string }): Promise<ProjectDto[]> {
     return await this.projectService.getProject(data);
   }
 }

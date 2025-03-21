@@ -10,12 +10,12 @@ export class PlanController {
   renderPlan() {}
 
   @Get('table')
-  renderTable() {
+  sendTable() {
     return this.planService.getTable();
   }
 
   @Get('goal')
-  async renderGoal() {
+  async sendGoal() {
     return await this.planService.getGoal();
   }
 }

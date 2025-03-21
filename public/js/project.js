@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const res = await fetch(window.location.href + '/data');
   const project = await res.json();
 
-  const title = document.createElement('title');
+  const title = document.createElement('h1');
   title.className = 'title';
   const detail = document.createElement('div');
   detail.className = 'detail';

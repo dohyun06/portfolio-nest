@@ -1,0 +1,67 @@
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 520px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  gap: 20px;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+}
+
+.organization,
+.link {
+  height: 125px;
+}
+
+.project,
+.stack {
+  height: 250px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.listTitle {
+  padding: 3px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stackImg {
+  padding: 3px;
+}
+
+.object {
+  background-color: #fff;
+  text-align: center;
+}

@@ -19,7 +19,7 @@ header {
   background-color: #fff;
   padding: 20px;
   display: flex;
-  justify-content: center; /* 중앙 정렬 */
+  justify-content: center;
   align-items: center;
   position: relative;
   box-shadow:
@@ -29,51 +29,21 @@ header {
 
 .logo {
   position: absolute;
-  left: 20px; /* 왼쪽 정렬 */
+  left: 20px;
   font-size: 20px;
   font-weight: bold;
 }
 
 .nav {
   display: flex;
-  gap: 40px; /* 글자 간격 */
+  gap: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 20px 20px; /* header 공간 확보 */
-  background-color: #fff;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 620px;
-}
-
-.column1 {
-  width: 350px;
-}
-
-.column2 {
-  width: 300px;
-}
-
-.object {
-  background-color: #fff;
-  text-align: center;
-}
-
 footer {
   background-color: #eee;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   margin-top: auto;
 }
