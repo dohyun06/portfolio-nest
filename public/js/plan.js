@@ -4,7 +4,6 @@ const timetable = document.querySelector('#timetable tbody tr');
 document.addEventListener('DOMContentLoaded', async () => {
   const resGoal = await fetch(window.location.href + '/goal');
   const goals = await resGoal.json();
-  console.log(goals);
 
   goals.map((goal) => {
     const listGoal = document.createElement('div');
@@ -16,8 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const resTable = await fetch(window.location.href + '/table');
   const subjects = await resTable.json();
-  console.log(subjects);
-  /*
 
   let col = document.createElement('td');
 
@@ -75,5 +72,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     timetable.appendChild(col);
   }
-    */
 });

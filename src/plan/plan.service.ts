@@ -12,14 +12,12 @@ export class PlanService {
       const python = spawn('py', [
         'C:\\Users\\Dohyun\\Desktop\\Develop\\Web\\portfolio-nest\\src\\plan\\crawling.py',
       ]);
-      let subjects: string[] = [];
+      let subjects: [string, number, number][][];
       // const python = spawn('py', [join(__dirname, ./crawling.py)]);
       python.stdout.on('data', (data: Buffer) => {
-        subjects = iconv
-          .decode(data, 'euc-kr')
-          .replace(/\[|\]/g, '')
-          .split(',');
-        console.log(subjects);
+        subjects = JSON.parse(
+          iconv.decode(data, 'euc-kr').replace(/'/g, '"'),
+        ) as [string, number, number][][];
       });
       python.stderr.on('data', (data: Buffer) => {
         console.error(data.toString('utf-8'));
@@ -41,9 +39,5 @@ export class PlanService {
         goal: true,
       },
     });
-  }
-
-  delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }
